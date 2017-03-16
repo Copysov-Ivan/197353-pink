@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo" href="index.html">Pink</a>
-        <button class="menu-burger menu-burger--open"></button>
-        <nav class="main-menu">
+      <div class="page-header__menu page-header__menu--open">
+        <div class="page-header__wrapper">
+          <a class="page-header__menu-logo" href="index.html">Pink</a>
+          <button class="page-header__menu-burger page-header__menu-burger--open"></button>
+        </div>
+        <nav class="main-menu hidden">
           <ul class="main-menu__list">
             <li class="main-menu__item">
               <a href="index.html" class="main-menu__link">Главная</a>
@@ -25,14 +28,16 @@
             </li>
           </ul>
         </nav>
-        <h1 class="header-title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+      </div>
+      <div class="page-header__background-img">
+        <h1 class="page-header__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
       </div>
     </header>
     <main class="page-main">
+      <p class="description-top">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
       <form class="form" action="https://echo.htmlacademy.ru/" method="get">
         <section class="full-name">
-          <div class="full-name__wrapper">
-            <p class="description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          <div class="full-name__wrapper">            
             <label class="full-name__label" for="surname">Фамилия:</label>
             <input class="full-name__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию *">
             <label class="full-name__label" for="name">Имя:</label>
@@ -84,8 +89,12 @@
             <div class="application-item">
               <input class="application-item__radiobtn" type="radio" id="ios" name="application" checked>
               <label class="application-item__text" for="ios">Pink для iOS</label>
+            </div>
+            <div class="application-item">
               <input class="application-item__radiobtn" type="radio" id="android" name="application">
               <label class="application-item__text" for="android">Pink для Android</label>
+            </div>
+            <div class="application-item">
               <input class="application-item__radiobtn" type="radio" id="windows" name="application">
               <label class="application-item__text" for="windows">Windows Phone</label>
             </div>
@@ -94,10 +103,12 @@
         <section class="review">
           <div class="review__wrapper">
             <h2 class="review__title">Опишите свои эмоции</h2>
-            <textarea name="review-emotions" placeholder="Можно прям в красках, не стесняйтесь в выражениях">
+            <textarea class="review__emotions" name="review-emotions" placeholder="Можно прям в красках, не стесняйтесь в выражениях">
             </textarea>
             <button class="review__btn" type="submit">Отправить форму</button>
-            <span class="review__note">* - Обязательные поля</span>
+            <div class="review__note">
+              <span class="review__note-star">*</span> - Обязательные поля
+            </div>
           </div>
         </section>
       </form>
@@ -116,17 +127,19 @@
         </div>
       </div>
     </footer>
-    <div class="popup-error">
+    <div class="popup-error hidden">
       <div class="popup-error__wrapper">
         <b class="popup-error__title">Что-то пошло не так!</b>
         <p class="popup-error__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="popup-btn">OK</button>
       </div>
     </div>
-    <div class="popup-success">
+    <div class="popup-success hidden">
       <div class="popup-success__wrapper">
-        <b class="popup-success">Ваша заявка отправлена</b>
-        <p class="popup-success__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <b class="popup-success__title">Ваша заявка отправлена</b>
+        <p class="popup-success__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>        
+      </div>
+      <div class="popup-btn-wrapper">
         <button class="popup-btn">Закрыть окно</button>
       </div>
     </div>
