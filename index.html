@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo">Pink</a>
-        <button class="menu-burger menu-burger--open"></button>
-        <nav class="main-menu">
+      <div class="page-header__menu page-header__menu--open">
+        <div class="page-header__wrapper">
+          <a class="page-header__menu-logo">Pink</a>
+          <button class="page-header__menu-burger page-header__menu-burger--open"></button>
+        </div>
+        <nav class="main-menu hidden">
           <ul class="main-menu__list">
             <li class="main-menu__item">
               <a class="main-menu__link">Главная</a>
@@ -26,8 +29,11 @@
           </ul>
         </nav>
       </div>
+      <div class="page-header__background">
+        <img class="page-header__img" src="img/iphone-hand-mobile@1x.png" alt="iphone-hand-mobile" width="258" height="286">
+      </div>
     </header>
-    <main class="page-main">
+    <main class="page-main-index">
       <section class="download">
         <div class="download__wrapper">
           <button class="button-download">Скачать приложение</button>
@@ -36,43 +42,44 @@
             <a class="download-list__link download-list__link--android" href="#">Android</a>
             <a class="download-list__link download-list__link--windows" href="#">Windows</a>
           </div>
-          <p class="info-download">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          <p class="download-info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </section>
+      <section class="information">
+        <p class="information__text">Устали от серости мегаполиса?</p>
+        <p class="information__text">Нам есть, что вам  предложить!</p>
+      </section>
       <section class="features">
-        <div class="features__wrapper">
-          <div class="features-info">
-            <p class="features-info__text">Устали от серости мегаполиса?</p>
-            <p class="features-info__text">Нам есть, что вам  предложить!</p>
-          </div>
-          <div class="features-list">
-            <article class="feature-item">
-              <b class="feature-item__title">Поднимает настроение</b>
-              <p class="feature-item__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+        <div class="features-list">
+          <div class="features-list__wrapper">
+            <article class="features-item">
+              <b class="features-item__title">Поднимает настроение</b>
+              <p class="features-item__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </article>
-            <article class="feature-item">
-              <b class="feature-item__title">Меняет мир вокруг</b>
-              <p class="feature-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            <article class="features-item">
+              <b class="features-item__title">Меняет мир вокруг</b>
+              <p class="features-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </article>
-            <article class="feature-item">
-              <b class="feature-item__title">Заводит новых друзей</b>
-              <p class="feature-item__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+            <article class="features-item">
+              <b class="features-item__title">Заводит новых друзей</b>
+              <p class="features-item__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
             </article>
+            <img class="features-list__img" src="img/iphone-screen-mobile@1x.png" alt="iphone-screen-mobile" width="157" height="320">
           </div>
         </div>
       </section>
       <section class="reviews">
         <div class="reviews__wrapper">
-          <div class="reviews-list">
+          <div class="reviews__list">
             <blockquote class="reviews-slide">
               <cite class="reviews-slide__author-name">Николай Петров</cite>
               <p class="reviews-slide__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
             </blockquote>
-            <blockquote class="reviews-slide">
+            <blockquote class="reviews-slide hidden">
               <cite class="reviews-slide__author-name">Николай Петров</cite>
               <p class="reviews-slide__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
             </blockquote>
-            <blockquote class="reviews-slide">
+            <blockquote class="reviews-slide hidden">
               <cite class="reviews-slide__author-name">Николай Петров</cite>
               <p class="reviews-slide__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
             </blockquote>
@@ -128,7 +135,7 @@
       </section>
       <section class="contacts">
         <div class="contacts__wrapper">
-          <span class="contacts-title">Остались вопросы? Свяжитесь с нами!</span>
+          <span class="contacts__title">Остались вопросы? Свяжитесь с нами!</span>
           <div class="contacts-item">
             <b class="contacts-item__title">Звоните:</b>
             <a class="contacts-item__number" href="tel:+78125556666">+7 (812) 555-66-66</a>
