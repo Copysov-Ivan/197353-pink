@@ -1,0 +1,109 @@
+.upload-scale__item {
+  position: relative;
+}
+.upload-scale__item--fill,
+.upload-scale__item--crop {
+  display: none;
+}
+.upload-scale__item--contrast {
+  position: absolute;
+  width: 240px;
+  left: 18px;
+  bottom: 34px;
+}
+.upload-scale__btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  font-size: 0;
+}
+.upload-scale__btn--fill {
+  margin: 0 35px;
+}
+.upload-scale__bar {
+  border-top: 2px solid #000;
+}
+.upload-scale__toogle {
+  width: 14px;
+  height: 14px;
+  display: block;
+  border: 2px solid #000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: absolute;
+  top: -6px;
+  right: 33px;
+  background: #f2f2f2;
+}
+@media @tablet-widths {
+  .upload-scale {
+    width: 100%;
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddfe0;
+  }
+  .upload-scale--crop {
+    padding-top: 9px;
+    padding-bottom: 24px;
+  }
+  .upload-scale--fill {
+    padding-top: 26px;
+    padding-bottom: 23px;
+  }
+  .upload-scale--contrast {
+    padding-top: 22px;
+    padding-bottom: 23px;
+  }
+  .upload-scale__btn {
+    width: 22px;
+    height: 22px;
+  }
+  .upload-scale__btn--fill {
+    width: 22px;
+    height: 24px;
+    margin: 0;
+  }
+  .upload-scale__item {
+    width: 202px;
+    margin: 10px 0;
+    margin-right: 17px;
+    padding: 0;
+    position: relative;
+  }
+  .upload-scale__item--fill,
+  .upload-scale__item--crop {
+    display: block;
+  }
+  .upload-scale__item--contrast {
+    left: inherit;
+    bottom: inherit;
+  }
+  .upload-scale__bar {
+    margin: 0;
+  }
+}
+@media @desktop-widths {
+  .upload-scale__btn {
+    width: 44px;
+    height: 44px;
+  }
+  .upload-scale__item {
+    width: 288px;
+    margin: auto;
+    margin-right: 30px;
+  }
+  .upload-scale--crop {
+    padding-top: 0px;
+    padding-bottom: 13px;
+    margin-top: -2px;
+  }
+  .upload-scale--fill {
+    padding-top: 15px;
+    padding-bottom: 14px;
+  }
+  .upload-scale--contrast {
+    padding-top: 11px;
+    padding-bottom: 13px;
+  }
+}

@@ -1,5 +1,6 @@
 .achievements__wrapper {
   padding: 0 20px;
+  padding-bottom: 21px;
   background-color: @bgcolor-grey;
 }
 .achievements__title {
@@ -8,7 +9,44 @@
   line-height: 18px;
   color: @color-lightred;
   text-transform: uppercase;
-  padding: 39px 20px;
+  padding: 39px 20px 16px 20px;
   text-align: center;
   margin: 0;
+}
+@media @tablet-widths {
+  .achievements {
+    order: -2;
+  }
+  .achievements__title {
+    width: 436px;
+    margin: 0 auto;
+    margin-top: -10px;
+    margin-bottom: 22px;
+    background-color: white;
+    padding: 0;
+  }
+  .achievements__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    margin-bottom: 65px;
+    padding: 0;
+    padding-bottom: 27px;
+    background: none;
+    border: 2px solid #f2f2f2;
+    box-sizing: border-box;
+  }
+}
+@media @desktop-widths {
+  .achievements__wrapper {
+    width: 940px;
+    padding: 0 60px;
+    padding-bottom: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .achievements__title {
+    margin-right: 192px;
+    margin-left: 192px;
+  }
 }

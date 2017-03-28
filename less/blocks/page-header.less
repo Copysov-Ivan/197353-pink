@@ -6,10 +6,12 @@
   color: @color-white;
 }
 .page-header__wrapper {
-  margin: 0 20px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   justify-content: space-between;
-  min-height: 66px;
+  min-height: 72px;
 }
 .page-header__menu {
   background-color: @color-header-menu;
@@ -39,12 +41,19 @@
   background-color: @color-darkblue;
   background-image: url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
-  min-height: 462px;
-  background-position: center;
+  background-position: top;
   width: 100%;
   margin-top: -66px;
   z-index: 0;
   display: flex;
+}
+
+.page-header__background-wrapper {
+  display: flex;  
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  min-height: 237px;
 }
 .page-header__background-img {
   background-color: @color-darkblue;
@@ -58,12 +67,80 @@
   display: flex;
 }
 .page-header__img {
-  align-self: flex-end;
+  padding-top: 176px;
 }
 .page-header__title {
-  padding-top: 99px;
-  margin: 0;
+  width: 230px;
+  padding-top: 97px;
+  // padding-bottom: 86px;
+  margin: 0 auto;
   font-family: @opensanslight;
   font-size: 24px;
+  font-weight: normal;
+  line-height: 28px;
   text-align: center;
+}
+@media @tablet-widths {
+  .page-header__wrapper {
+    width: 620px;
+    min-height: 109px;
+  }
+  .page-header__background {
+    background-image: url(../img/bg-back-tablet@1x.jpg );
+    margin-top: -110px;
+    // min-height: auto;
+  }
+  .page-header__background-wrapper {
+    justify-content: flex-end;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 620px;
+    min-height: 440px;
+  }
+  .page-header__title {
+    font-size: 50px;
+    width: 500px;
+    line-height: 60px;
+    padding-top: 180px;
+    // padding-bottom: 139px;
+  }
+  .page-header__img {
+    width: 470px;
+    height: 546px;
+    padding-top: 183px;
+  }
+}
+@media @desktop-widths {
+  .page-header__wrapper {
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .page-header__menu-burger {
+    display: none;
+  }
+  .page-header__background {
+    // min-height: auto;
+    background-image: url(../img/bg-back-desktop@1x.jpg);
+  }
+  .page-header__background-wrapper {
+    width: 940px;
+    min-height: 394px;
+    padding: 0 10px;
+  }
+  .page-header__title {
+    padding-top: 175px;
+    // padding-bottom: 100px;
+  }
+  .page-header__img {
+    padding-top: 307px;
+  }
+}
+@media @desktop-widths {
+  .page-header__title {
+    width: 800px;
+  }
+  .description-top {
+    padding-bottom: 85px;
+  }
 }

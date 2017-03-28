@@ -1,5 +1,5 @@
 .application__wrapper {
-  padding: 40px 20px 42px 20px;
+  padding: 40px 20px 40px 20px;
   background-color: @bgcolor-grey;
 }
 .application__title {
@@ -10,4 +10,38 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+}
+@media @tablet-widths {
+  .application {
+    order: -4;
+  }
+  .application__wrapper {
+    padding: 0;
+    width: 620px;
+    margin: 0 auto;
+    margin-bottom: 65px;
+    border: 2px solid #f2f2f2;
+    box-sizing: border-box;
+    padding-bottom: 52px;
+    background: none;
+  }
+  .application__title {
+    margin: 0 auto;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    background-color: white;
+    width: 368px;
+  }
+  .application-item {
+    padding-left: 118px;
+  }
+}
+@media @desktop-widths {
+  .application__wrapper  {
+    width: 435px;
+    margin-top: -6px;
+  }
+  .application__title {
+    margin-bottom: 11px;
+  }
 }

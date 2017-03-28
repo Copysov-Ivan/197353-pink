@@ -1,7 +1,11 @@
 .full-name__wrapper {
-  padding: 0 20px 66px 20px;
+  padding: 0 20px 43px 20px;
 }
 .full-name__label {
+  display: block;
+  padding-left: 22px;
+  padding-bottom: 5px;
+  padding-top: 18px;
   font-family: @opensans;
   font-size: 14px;
   line-height: 30px;
@@ -15,7 +19,40 @@
   font-size: 18px;
   line-height: 30px;
   color: @color-darkblue;
-  padding: 18px 0;
-  text-align: center;
+  padding: 14px 0;
+  padding-left: 21px;
+  text-align: left;
   box-sizing: border-box;
+}
+@media @tablet-widths {
+  .full-name {
+    order: -5;
+  }
+  .full-name__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    padding-bottom: 13px;
+  }
+  .full-name__field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 53px;
+  }
+  .full-name__label {
+    padding: 0;
+    padding-right: 19px;
+  }
+  .full-name__input {
+    padding-left: 20px;
+  }
+}
+@media @desktop-widths {
+  .full-name__wrapper {
+    width: 435px;
+    padding: 0;
+  }
+  .full-name__field {
+    margin-bottom: 54px;
+  }
 }

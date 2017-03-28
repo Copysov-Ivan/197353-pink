@@ -1,9 +1,58 @@
 .photo-item {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 0;
 }
 .photo-item__wrapper {
   padding: 0 20px;
 }
-.photo-items__img {
+.photo-item__img {
   display: block;
+}
+@media @tablet-widths {
+  .photo-item {
+    background-color: #f2f2f2;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .photo-item--big {
+    padding-bottom: 50px;
+    background: none;
+    margin-bottom: 0;
+  }
+  .photo-item__wrapper {
+    padding: 0;
+    width: 300px;
+  }
+  .photo-item__img {
+    width: 300px;
+    height: 300px;
+  }
+  .photo-item__img--big {
+    width: 700px;
+    height: 509px;
+  }
+  .photo-item__wrapper--big {
+    padding: 0;
+    width: auto;
+  }
+}
+@media @desktop-widths {
+  .photo-item {
+    margin: 0;
+  }
+  .photo-item__img {
+    height: 400px;
+  }
+  .photo-item--small {
+    margin-bottom: 54px;
+  }
+  .photo-item__img--big {
+    width: 1200px;
+    height: 506px;
+  }
+  .photo-item--anton,
+  .photo-item--maksim {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
 }

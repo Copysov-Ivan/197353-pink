@@ -1,0 +1,25 @@
+.slider-btn {
+  display: flex;
+  justify-content: center;
+  padding-left: 13px;
+}
+.slider-btn__toggle {
+  font-size: 0;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(40,54,69,0.3);
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  margin-right: 13px;
+}
+.slider-btn__toggle--active {
+  background: none;
+  border: 3px solid @color-darkblue;
+}
+@media @desktop-widths {
+  .slider-btn {
+    display: none;
+  }
+}

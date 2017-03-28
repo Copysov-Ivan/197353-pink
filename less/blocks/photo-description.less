@@ -1,6 +1,6 @@
 .photo-description {
   background-color: @bgcolor-grey;
-  padding: 20px;
+  padding: 18px;
 }
 .photo-description__name {
   font-family: @opensansbold;
@@ -18,15 +18,75 @@
 }
 .photo-description__text {
   font-family: @opensans;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 24px;
   color: @color-darkblue;
   margin: 0;
 }
 .photo-description__like {
-  font-family: @opensans;
-  font-size: 14px;
-  line-height: 24px;
-  color: @color-lightred;
+  padding-top: 10px;
+  padding-left: 31px;
   margin: 0;
+  font-family: @opensans;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: @color-lightred;
+}
+.photo-description__like-anton {
+  padding-top: 12px;
+  padding-bottom: 1px;
+}
+.photo-description__like-boris {
+  padding-bottom: 1px;
+}
+.photo-description__like-sergei {
+  padding-bottom: 2px;
+}
+.photo-description__like-maksim {
+  padding-bottom: 2px;
+}
+.photo-description__like-nadezhda {
+  padding-bottom: 2px;
+}
+@media @tablet-widths {
+  .photo-description {
+    margin: 0;
+    padding: 0;
+    padding-top: 24px;
+    padding-left: 29px;
+    padding-right: 10px;
+  }
+  .photo-description--big {
+    width: 620px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .photo-description--small {
+    min-height: 155px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  .photo-description__like {
+    padding: 0;
+  }
+  .photo-description__like--small {
+    margin-top: auto;
+    padding-bottom: 22px;
+  }
+  .photo-description__like--big {
+    bottom: 72px;
+    left: 444px;
+    position: relative;
+  }
+}
+@media @desktop-widths { 
+  .photo-description--big {
+    width: 940px;
+  }
+  .photo-description__like--big {
+    bottom: 48px;
+    left: 760px;
+  }
 }

@@ -2,8 +2,48 @@
   background-color: @bgcolor-download;
   color: @color-white;
   text-align: center;
-  width: 320px;
+
+  @media @tablet-widths {
+    margin: auto;
+    width: 620px;
+    padding: 0 20px;
+    position: relative;
+    margin-top: -526px;
+    padding-bottom: 75px;
+    background: none;
+  }
 }
-.download__wrapper {
+.download__wrapper { 
   padding: 0 20px;
+
+  @media @tablet-widths {
+    width: 300px;
+    padding: 0;
+  }
+}
+.download__title {
+  font-family: @opensanslight;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  margin: 0;
+  padding: 0 30px;
+  font-weight: normal;
+  display: none;
+  
+  @media @tablet-widths {
+    display: block;
+  }
+}
+
+@media @desktop-widths {
+  .download {
+    width: 940px;
+    margin-top: -634px;
+    padding: 0 10px 68px 10px;
+  }
+  .download__title {
+    font-size: 50px;
+    line-height: 60px;    
+  }
 }
