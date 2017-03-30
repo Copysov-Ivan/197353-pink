@@ -1,17 +1,33 @@
 .price-table {
   background-color: @color-white;
   border-collapse: collapse;
-  margin-left: 20px;
-  margin-right: 20px;
+  width: 100%;
 }
 .price-table__header {
-  background-color: @color-darkblue;
+  background-color: @bgcolor-grey;
 }
 .price-table__title {
-  border: 2px solid @color-table-border;
+  background-color: @color-darkblue;
+  border: 2px solid @color-darkblue;
   border-top: none;
   border-bottom: none;
-  min-width: 280px;
+  min-width: 278px;
+  height: 98px;
+  box-sizing: border-box;
+}
+.price-table__title:nth-child(2) {
+  border-right: 2px solid @color-table-border;
+}
+.price-table__title:nth-child(4) {
+  border-right: 2px solid @color-table-border;
+}
+.price-table__title--first,
+.price-table__ceil--first {
+  display: none;
+}
+.price-table__title--hit {
+  border-left: 2px solid @color-table-border;
+  border-right: 2px solid @color-table-border;
 }
 .price-table__rate {
   font-family: @opensansbold;
@@ -19,12 +35,14 @@
   line-height: 30px;
   color: @color-white;
   text-transform: uppercase;
+  display: block;
 }
 .price-table__cost{
   font-family: @opensanslight;
   font-size: 24px;
   line-height: 30px;
   color: @color-white;
+  font-weight: normal;
 }
 .price-table__body {
   font-family: @opensans;
@@ -34,5 +52,71 @@
 }
 .price-table__ceil {
   border: 2px solid @color-table-border;
-  border-top: none;
+  border-top: 2px solid transparent;
+  height: 57px;
+  text-transform: uppercase;
+  padding-left: 22px;
+}
+.price-table__ceil--first {
+  border-top: 2px solid @color-table-border;
+  text-transform: none;
+}
+@media @tablet-widths {
+  .price-table__title {
+    min-width: 25%;
+    height: 78px;
+  }
+  .price-table__rate {
+    font-size: 16px;
+    padding-top: 5px;
+    margin-bottom: -2px;
+  }
+  .price-table__cost {
+    font-size: 18px;
+  }
+  .price-table__title--first,
+  .price-table__ceil--first {
+    display: table-cell;
+  }
+  .price-table__ceil {
+    height: 43px;
+    padding-left: 0;
+    font-size: 0;
+    width: 25%;
+  }
+  .price-table__ceil--first {
+    padding-left: 16px;
+    font-size: 14px;
+  }
+  .price-table__ceil--available {
+    background-image: url(../img/icon-yes.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 31px 21px;
+  }
+  .price-table__ceil--disable {
+    background-image: url(../img/icon-no.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 27px 26px;
+  }
+}
+@media @desktop-widths {
+  .price-table__title {
+    height: 98px;
+  }
+  .price-table__rate {
+    font-size: 18px;
+  }
+  .price-table__cost {
+    font-size: 24px;
+  }
+  .price-table__ceil {
+    height: 57px;
+  }
+  .price-table__ceil--first {
+    font-size: 18px;
+    line-height: 30px;
+    padding-left: 22px;
+  }
 }

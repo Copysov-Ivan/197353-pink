@@ -5,12 +5,32 @@
   background-size: 100% auto;
   background-position: bottom center;
   text-align: center;
-  width: 320px;
+  padding-bottom: 68px;
 }
 .reviews__wrapper {
   padding: 0 20px;
-}
-.reviews__list {
+  padding-top: 43px;
   position: relative;
   background-color: white;
+}
+@media @tablet-widths {
+  .reviews {
+    padding-top: 98px;
+  }
+  .reviews__wrapper {
+    width: 620px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background: none;
+  }
+}
+@media @desktop-widths {
+  .reviews {
+    padding-top: 252px;
+    padding-bottom: 88px;
+  }
+  .reviews__wrapper {
+    width: 940px;
+    padding: 0 10px;
+  }
 }

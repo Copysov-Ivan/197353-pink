@@ -5,4 +5,34 @@
   color: @color-white;
   background-color: transparent;
   border: 3px solid @color-white;
+  border-radius: 35px;
+  height: 55px;
+  width: 281px;
+  box-sizing: border-box;
+  margin-top: 28px;
+  margin-bottom: 32px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  padding-top: 14px;
+
+  @media @tablet-widths {
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    display: block;
+    text-decoration: none;
+    padding-top: 16px;
+  }
+}
+
+@media @desktop-widths {
+  .button-download {
+    margin-top: 50px;
+    margin-bottom: 68px;
+    font-size: 21px;
+    display: block;
+    text-decoration: none;
+    padding-top: 16px;
+  }
 }

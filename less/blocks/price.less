@@ -3,3 +3,32 @@
   padding-top: 66px;
   overflow: hidden;
 }
+.price__wrapper {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.price__btn {
+  padding-top: 40px;
+  padding-bottom: 47px;
+}
+@media @tablet-widths {
+  .price {
+    padding-top: 40px;
+    padding-bottom: 68px;
+  }
+  .price__wrapper {
+    width: 620px;
+  }
+  .slider-btn.price__btn {
+    display: none;
+  }
+}
+@media @desktop-widths {
+  .price {
+    padding-top: 66px;
+  }
+  .price__wrapper {
+    width: 940px;
+    padding: 0 10px;
+  }
+}

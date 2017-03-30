@@ -1,9 +1,29 @@
 .achievements-item {
-  padding-bottom: 42px
+  padding-top: 26px;
+  padding-bottom: 26px;
 }
 .achievements-item__text{
   font-family: @opensans;
   font-size: 18px;
   line-height: 30px;
   color: @color-darkblue;
+  padding-left: 70px;
+}
+.achievements-item__checkbox {
+  display: none;
+}
+@media @tablet-widths {
+  .achievements-item__text {
+    padding-left: 118px;
+  }
+}
+@media @desktop-widths {
+  .achievements-item {
+    width: 260px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  .achievements-item__text {
+    padding: 0;
+  }
 }

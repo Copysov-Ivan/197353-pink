@@ -1,4 +1,41 @@
 .footer-social {
-  padding-top: 43px;
-  padding-bottom: 42px;
+  padding-top: 40px;
+  padding-bottom: 37px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.footer-social__btn {
+  width: 45px;
+  height: 45px;
+  border: 3px solid rgba(40,54,69,0.1);
+  display: block;
+  font-size: 0;
+  border-radius: 50%;
+}
+.footer-social__btn--tw {
+  background-image: url(../img/icon-twitter.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footer-social__btn--fb {
+  margin: 0 12px;
+  background-image: url(../img/icon-facebook.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footer-social__btn--yb {
+  background-image: url(../img/icon-youtube.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media @tablet-widths {
+  .footer-social__btn--fb {
+    margin: 0 12px;
+  }
+}
+@media @desktop-widths {
+  .footer-social {
+    padding-left: 9px;
+  }
 }

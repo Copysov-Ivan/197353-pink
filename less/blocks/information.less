@@ -7,8 +7,37 @@
   font-size: 24px;
   color: @color-darkblue;
   text-align: center;
-  width: 320px;
+  padding-top: 26px;
+  padding-bottom: 50px;
 }
 .information__text {
   margin: 0;
+  padding: 16px 0;
+}
+@media @tablet-widths {
+  .information {
+    padding-top: 48px;
+    padding-bottom: 110px;
+    line-height: 48px;
+  }
+  .information__text {
+    padding: 0;
+    font-size: 40px;
+  }
+  .information__text:nth-child(2) {
+    padding: 0 100px;
+  }
+}
+@media @desktop-widths {
+  .information {
+    padding-top: 68px;
+    padding-bottom: 170px;
+  }
+  .information__text:nth-child(2) {
+    padding: 0 300px;
+  }
+  .information__text {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }

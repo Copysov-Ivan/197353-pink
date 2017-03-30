@@ -1,0 +1,36 @@
+.reserch {
+  display: none;
+  position: relative;
+  background-color: @color-white;
+  padding-top: 59px;
+}
+.reserch__img {
+  display: block;
+}
+.reserch__wrapper {
+  width: 620px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+@media @tablet-widths {
+  .reserch {
+    display: block;
+  }
+}
+@media @desktop-widths {
+  .reserch {
+    padding-top: 48px;
+    background-color: @bgcolor-grey;
+  }
+  .reserch__wrapper {
+    width: 940px;
+    padding: 0 10px;
+    justify-content: initial;
+  }
+  .reserch__img {
+    width: 298px;
+    height: 345px;
+  }
+}

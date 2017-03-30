@@ -1,6 +1,36 @@
+.footer-copyright {
+  display: flex;
+  justify-content: flex-end;
+  width: 152px;
+  align-self: auto;
+}
 .footer-copyright__text {
   font-family: @opensans;
   font-size: 14px;
   line-height: 18px;
   color: @color-darkblue;
+  align-self: center;
+}
+.footer-copyright__link {
+  margin-top: 2px;
+  display: block;
+  width: 27px;
+  height: 34px;
+  background-image: url(../img/logo-htmlacademy.svg);
+  font-size: 0;
+  margin-left: 15px;
+  background-repeat: no-repeat;
+  align-self: center;
+}
+@media @desktop-widths {
+  .footer-copyright {
+    width: 152px;
+  }
+  .footer-copyright__text {
+    font-size: 18px;
+  }
+  .footer-copyright__link {
+    margin-top: 7px;
+    margin-left: 13px;
+  }
 }
