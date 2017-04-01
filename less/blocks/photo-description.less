@@ -32,6 +32,17 @@
   line-height: 24px;
   text-transform: uppercase;
   color: @color-lightred;
+  position: relative;
+}
+.photo-description__like:before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 12px;
+  background-image: url(../img/icon-heart.svg);
+  background-repeat: no-repeat;
+  top: 15px;
+  left: 0;
 }
 .photo-description__like-anton {
   padding-top: 12px;
@@ -56,6 +67,15 @@
     padding-top: 24px;
     padding-left: 29px;
     padding-right: 10px;
+  }
+  .photo-description__like:before {
+    top: 5px;
+    left: auto;
+    right: 22px;
+  }
+  .photo-description__like--big:before {
+    top: 5px;
+    left: 105px;
   }
   .photo-description--big {
     width: 620px;
@@ -88,5 +108,8 @@
   .photo-description__like--big {
     bottom: 48px;
     left: 760px;
+  }
+  .photo-description__like--big:before {
+    left: 106px;
   }
 }

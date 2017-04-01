@@ -13,6 +13,13 @@
   font-size: 0;
   border-radius: 50%;
 }
+.footer-social__btn:hover {
+  border: 3px solid #283645;
+}
+.footer-social__btn:active {
+  opacity: 0.3;
+  border: 3px solid rgba(40, 54, 69, 0.33);
+}
 .footer-social__btn--tw {
   background-image: url(../img/icon-twitter.svg);
   background-repeat: no-repeat;
@@ -30,8 +37,15 @@
   background-position: center;
 }
 @media @tablet-widths {
+  .footer-social {
+    padding-top: 39px;
+    margin-left: 4px;
+  }
   .footer-social__btn--fb {
     margin: 0 12px;
+  }
+  .footer-social__btn--yb {
+    background-position: 17px 14px;
   }
 }
 @media @desktop-widths {

@@ -1,3 +1,9 @@
+.main-menu {
+  display: none;
+}
+// .page-header__menu--open .main-menu {
+//   display: block;
+// }
 .main-menu__list {
   list-style: none;
   padding: 0;
@@ -21,6 +27,15 @@
   color: @color-white;
   width: 100%;
 }
+.main-menu__link:hover {
+  color: #d22856;
+}
+.main-menu__link:active {
+  color: rgba(255,255,255,0.3);
+}
+.main-menu__link--active:active {
+  color: #d22856;
+}
 @media @desktop-widths {
   .main-menu {
     display: flex;
@@ -42,9 +57,23 @@
     border: none;
   }
   .main-menu__link {
+    padding: 0;
+    position: relative;
     text-transform: none;
     font-family: @opensans;
     line-height: 18px;
-    padding: 0;
+  }
+  .main-menu__link--active::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+  }
+  .main-menu__link--active:hover::after {
+    background-color: #d22856;
   }
 }

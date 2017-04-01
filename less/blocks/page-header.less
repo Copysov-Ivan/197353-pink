@@ -11,31 +11,51 @@
   padding-right: 20px;
   display: flex;
   justify-content: space-between;
-  min-height: 72px;
+  min-height: 66px;
 }
 .page-header__menu {
   background-color: @color-header-menu;
   width: 100%;
   z-index: 1;
 }
+.page-header__menu--open .main-menu {
+  display: block;
+}
+.page-header__menu--open .page-header__wrapper {
+  min-height: 72px;
+}
 .page-header__menu-logo {
+  display: block;
   width: 100px;
   height: 22px;
   background-image: url(../img/logo-pink-white-mobile.svg);
   background-repeat: no-repeat;
   margin: auto 0;
   font-size: 0;
-  display: block;
+  z-index: 1;
+}
+.page-header__menu-logo:hover {
+  background-image: url(../img/logo-pink-red-mobile.svg);
+}
+.page-header__menu-logo:active {
+  background-image: url(../img/logo-pink-white-mobile.svg);
+  opacity: 0.3;
 }
 .page-header__menu-burger {
   background-image: url(../img/icon-menu-burger.svg);
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: right;
   width: 50px;
   height: 24px;
   align-self: center;
   cursor: pointer;
   border: 0;
   padding: 0;
+}
+.page-header__menu-burger--open {
+  width: 24px;
+  background-image: url(../img/icon-menu-cross.svg);
 }
 .page-header__background {
   background-color: @color-darkblue;
@@ -80,9 +100,23 @@
     width: 620px;
     min-height: 109px;
   }
+  .page-header__menu-logo {
+    width: 146px;
+    height: 55px;
+    background-image: url(../img/logo-pink-white-tablet.svg);
+  }
+  .page-header__menu-logo:hover {
+    background-image: url(../img/logo-pink-red-tablet.svg);
+  }
+  .page-header__menu-logo:active {
+    background-image: url(../img/logo-pink-white-tablet.svg);
+    pacity: 0.3;
+  }
+  .page-header__menu--open .page-header__wrapper {
+    min-height: 110px;
+  }
   .page-header__background {
     margin-top: -110px;
-    // background: none;
     background-image: url(../img/bg-back-tablet@1x.jpg);
     padding-top: 0;
   }
@@ -105,6 +139,9 @@
     width: 940px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .page-header__menu--open .main-menu {
+    display: flex;
   }
   .page-header__menu-burger {
     display: none;
