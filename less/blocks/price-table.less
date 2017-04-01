@@ -2,6 +2,7 @@
   background-color: @color-white;
   border-collapse: collapse;
   width: 100%;
+  margin-left: -279px;
 }
 .price-table__header {
   background-color: @bgcolor-grey;
@@ -14,6 +15,7 @@
   min-width: 278px;
   height: 98px;
   box-sizing: border-box;
+  position: relative;
 }
 .price-table__title:nth-child(2) {
   border-right: 2px solid @color-table-border;
@@ -28,6 +30,27 @@
 .price-table__title--hit {
   border-left: 2px solid @color-table-border;
   border-right: 2px solid @color-table-border;
+}
+.price-table__title--hit::before {
+  content: "";
+  position: absolute;
+  color: white;
+  background-image: url(../img/bg-hit.svg);
+  width: 74px;
+  height: 73px;
+  top: 0;
+  left: 0;
+}
+.price-table__title--hit::after {
+  content: "хит";
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  top: 19px;
+  left: 10px;
+  transform: rotate(-45deg);
+  font-size: 14px;
+  font-family: @opensans;
 }
 .price-table__rate {
   font-family: @opensansbold;
@@ -61,7 +84,22 @@
   border-top: 2px solid @color-table-border;
   text-transform: none;
 }
+.price-table__ceil--available {
+  background-image: url(../img/icon-yes.svg);
+  background-repeat: no-repeat;
+  background-position: 231px;
+  background-size: 31px 21px;
+}
+.price-table__ceil--disable {
+  background-image: url(../img/icon-no.svg);
+  background-repeat: no-repeat;
+  background-position: 231px;
+  background-size: 27px 26px;
+}
 @media @tablet-widths {
+  .price-table {
+    margin-left: 0;
+  }
   .price-table__title {
     min-width: 25%;
     height: 78px;
@@ -78,6 +116,15 @@
   .price-table__ceil--first {
     display: table-cell;
   }
+  .price-table__title--hit::before {
+    background-image: url(../img/bg-hit-tablet.svg);
+    width: 61px;
+    height: 61px;
+  }
+  .price-table__title--hit::after {
+    top: 11px;
+    left: 8px;
+  }
   .price-table__ceil {
     height: 43px;
     padding-left: 0;
@@ -89,16 +136,16 @@
     font-size: 14px;
   }
   .price-table__ceil--available {
-    background-image: url(../img/icon-yes.svg);
-    background-repeat: no-repeat;
+    // background-image: url(../img/icon-yes.svg);
+    // background-repeat: no-repeat;
     background-position: center;
-    background-size: 31px 21px;
+    // background-size: 31px 21px;
   }
   .price-table__ceil--disable {
-    background-image: url(../img/icon-no.svg);
-    background-repeat: no-repeat;
+    // background-image: url(../img/icon-no.svg);
+    // background-repeat: no-repeat;
     background-position: center;
-    background-size: 27px 26px;
+    // background-size: 27px 26px;
   }
 }
 @media @desktop-widths {
@@ -107,9 +154,20 @@
   }
   .price-table__rate {
     font-size: 18px;
+    padding-top: 0;
+    margin-bottom: 0;
   }
   .price-table__cost {
     font-size: 24px;
+  }
+  .price-table__title--hit::before {
+    background-image: url(../img/bg-hit.svg);
+    width: 74px;
+    height: 73px;
+  }
+  .price-table__title--hit::after {
+    top: 19px;
+    left: 10px;
   }
   .price-table__ceil {
     height: 57px;

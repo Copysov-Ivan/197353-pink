@@ -8,24 +8,24 @@
   </head>
   <body>
     <header class="page-header container">
-      <div class="page-header__menu page-header__menu--open">
+      <div class="page-header__menu">
         <div class="page-header__wrapper">
           <a class="page-header__menu-logo" href="index.html">Pink</a>
-          <button class="page-header__menu-burger page-header__menu-burger--open"></button>
+          <button class="page-header__menu-burger"></button>
         </div>
         <nav class="main-menu">
           <ul class="main-menu__list">
             <li class="main-menu__item">
-              <a href="index.html" class="main-menu__link">Главная</a>
+              <a class="main-menu__link" href="index.html">Главная</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link">Фотографии</a>
+              <a class="main-menu__link main-menu__link--active">Фотографии</a>
             </li>
             <li class="main-menu__item">
-              <a href="form.html" class="main-menu__link">Конкурс</a>
+              <a class="main-menu__link" href="form.html">Конкурс</a>
             </li>
             <li class="main-menu__item">
-              <a href="https://htmlacademy.ru/" class="main-menu__link">HTML Academy</a>
+              <a class="main-menu__link" href="https://htmlacademy.ru/">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -120,30 +120,30 @@
           <div class="upload__settings">
             <div class="upload-filter">
               <div class="upload-scale upload-scale--crop">
-                <button class="upload-scale__btn upload-scale__btn--crop  upload-filter__btn--active">Crop</button>
+                <button class="upload-scale__btn upload-scale__btn--crop upload-scale__btn--active">Crop</button>
                 <div class="upload-scale__item upload-scale__item--crop">
                   <div class="upload-scale__bar"></div>
-                  <div class="upload-scale__toogle"></div>
+                  <div class="upload-scale__toogle upload-scale__toogle--crop"></div>
                 </div>
               </div>
               <div class="upload-scale upload-scale--fill">
                 <button class="upload-scale__btn upload-scale__btn--fill">Fill</button>
                 <div class="upload-scale__item upload-scale__item--fill">
                   <div class="upload-scale__bar"></div>
-                  <div class="upload-scale__toogle"></div>
+                  <div class="upload-scale__toogle upload-scale__toogle--fill"></div>
                 </div>
               </div>
               <div class="upload-scale upload-scale--contrast">
                 <button class="upload-scale__btn upload-scale__btn--contrast">Contrast</button>
                 <div class="upload-scale__item upload-scale__item--contrast">
                   <div class="upload-scale__bar"></div>
-                  <div class="upload-scale__toogle"></div>
+                  <div class="upload-scale__toogle upload-scale__toogle--contrast"></div>
                 </div>
               </div>
             </div>
             <form class="upload-form" action="https://echo.htmlacademy.ru/" method="get">
               <button class="upload-form__btn upload-form__btn--active" type="submit">Запостить</button>
-              <button class="upload-form__btn" type="reset">Сбросить</button>
+              <button class="upload-form__btn" type="reset">Отмена</button>
             </form>
           </div>
         </div>
@@ -163,5 +163,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/menu-burger.js"></script>
   </body>
 </html>

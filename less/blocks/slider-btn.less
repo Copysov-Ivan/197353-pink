@@ -13,10 +13,21 @@
   border: 3px solid transparent;
   background-clip: content-box;
   margin-right: 13px;
+  cursor: pointer;
+}
+.slider-btn__toggle:hover {
+  background-color: rgba(40, 54, 69, 0.6);
+}
+.slider-btn__toggle:active {
+  background-color: rgba(40, 54, 69, 0.1);
 }
 .slider-btn__toggle--active {
   background: none;
   border: 3px solid @color-darkblue;
+  cursor: auto;
+}
+.slider-btn__toggle--active:hover {
+  background: none;
 }
 @media @desktop-widths {
   .slider-btn {

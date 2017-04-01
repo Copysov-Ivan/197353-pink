@@ -31,7 +31,16 @@
   line-height: 28px;
   padding-bottom: 40px;
 }
-
+.contacts-item__number:hover,
+.contacts-item__mail:hover {
+  color: #283645;
+  text-decoration: underline;
+}
+.contacts-item__number:active,
+.contacts-item__mail:active {
+  color: rgba(40,54,69,0.3);
+  text-decoration: none;
+}
 @media @tablet-widths {
   .contacts-item {
     display: inline-block;

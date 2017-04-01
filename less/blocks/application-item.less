@@ -1,6 +1,5 @@
 .application-item {
   padding-top: 38px;
-  padding-left: 70px;
   padding-bottom: 7px;
 }
 .application-item__text {
@@ -8,17 +7,50 @@
   font-size: 18px;
   line-height: 30px;
   color: @color-darkblue;
+  position: relative;
+  padding-left: 70px;
+}
+.application-item__text::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  left: 0px;
+  top: -7px;
+  border-radius: 50%;
+  background-color: white;
+}
+.application-item__text:hover::before {
+  border: 2px solid #283645;
+}
+.application-item__text:active::before {
+  border: 2px solid #d22856;
 }
 .application-item__radiobtn {
   display: none;
 }
+.application-item__radiobtn:checked + .application-item__text::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #d22856;
+  left: 12px;
+  top: 5px;
+  border-radius: 50%;
+}
 @media @tablet-widths {
   .application-item {
-    padding-left: 118px;
+    padding-left: 58px;
   }
+  .application-item__text {
+    padding-left: 60px;
+  }
+
 }
 @media @desktop-widths {
   .application-item {
-    padding-left: 134px;
+    padding-left: 73px;
   }
 }
