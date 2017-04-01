@@ -5,7 +5,7 @@
   var mobileMenu = document.querySelector(".page-header__menu");
 
   openClose.addEventListener('click', function(event) {
-    
+
     if (mobileMenu.classList.contains("page-header__menu--open")) {
 
       event.preventDefault();
