@@ -34,7 +34,11 @@
     <main class="page-main-index container">
       <section class="download">
         <div class="download__background">
-          <img class="download__img" src="img/iphone-hand-mobile@1x.png" alt="iphone-hand-mobile" width="258" height="286">
+          <picture>
+            <source media="(min-width: 977px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+            <source media="(min-width: 677px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+            <img class="download__img" src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="iphone-hand-mobile" width="258" height="286">
+          </picture>
         </div>
         <div class="download__wrapper">
           <h2 class="download__title">Взгляните на жизнь иначе!</h2>
@@ -54,25 +58,28 @@
       <section class="features">
         <div class="features__wrapper">
           <div class="features__list">
-            <article class="features-item">
+            <article class="features-item features-item--gray">
               <b class="features-item__title">Поднимает настроение</b>
               <p class="features-item__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </article>
-            <article class="features-item">
+            <article class="features-item features-item--red">
               <b class="features-item__title">Меняет мир вокруг</b>
               <p class="features-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </article>
-            <article class="features-item">
+            <article class="features-item features-item--smile">
               <b class="features-item__title">Заводит новых друзей</b>
               <p class="features-item__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </article>
           </div>
-          <img class="features__img" src="img/iphone-screen-mobile@1x.png" alt="iphone-screen-mobile" width="157" height="320">
+          <picture>
+            <source media="(min-width: 677px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+            <img class="features__img" src="img/iphone-screen-mobile@1x.png"  srcset="img/iphone-screen-mobile@2x.png 2x" alt="iphone-screen-mobile" width="157" height="320">
+          </picture>
         </div>
       </section>
       <section class="reserch">
         <div class="reserch__wrapper">
-          <img class="reserch__img" src="http://placehold.it/238x276/" alt="reserch" width="238" height="276">
+          <img class="reserch__img" src="img/icon-timer.svg" alt="reserch" width="238" height="276">
           <div class="reserch-description">
             <h3 class="reserch-description__title">Эффект на 24 часа!</h3>
             <p class="reserch-description__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
@@ -88,7 +95,10 @@
                 <b class="reviews-slide__author-name">Николай Петров</b>
                 <span class="reviews-slide__author-age">25 лет, водитель трамвая</span>
               </cite>
-              <p class="reviews-slide__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              <p class="reviews-slide__text">
+                <span class="reviews-slide__quotes">«</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span class="reviews-slide__quotes">»
+                </span>
+              </p>
             </blockquote>
             <blockquote class="reviews-slide hidden">
               <cite class="reviews-slide__author">
@@ -104,6 +114,10 @@
               </cite>
               <p class="reviews-slide__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
+          </div>
+          <div class="reviews__slider">
+            <a class="reviews__slider-conrol reviews__slider-conrol--left">Влево</a>
+            <a class="reviews__slider-conrol reviews__slider-conrol--right">Вправо</a>
           </div>
           <div class="slider-btn">
             <label class="slider-btn__toggle slider-btn__toggle--active">1</label>
