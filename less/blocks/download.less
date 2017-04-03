@@ -26,9 +26,14 @@
   padding-top: 98px;
   z-index: 0;
   display: flex;
+  @media @retina {
+    background-image: url(../img/bg-back-mobile@2x.jpg);
+    background-size: 700px auto;
+  }
 }
 .download__img {
   padding-top: 81px;
+  display: block;
 }
 @media @tablet-widths {
   .download {
@@ -51,13 +56,14 @@
     width: 300px;
     padding: 0;
     margin-top: 93px;
-    margin-right: -150px;
+    margin-right: -300px;
     z-index: 1;
   }
   .download__img {
-    width: 470px;
-    height: 546px;
+    width: 700px;
+    height: 545px;
     padding-top: 85px;
+    margin-left: -40px;
   }
 }
 @media @desktop-widths {
@@ -76,8 +82,9 @@
     padding-top: 0;
   }
   .download__img {
-    width: 595px;
-    height: 648px;
-    padding-top: 80px;
+    width: 1050px;
+    height: 645px;
+    padding-top: 83px;
+    margin-right: -126px;
   }
 }

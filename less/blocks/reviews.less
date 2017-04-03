@@ -2,7 +2,7 @@
   background-image: url(../img/bg-gray-triangle.svg);
   background-color: @color-white;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 26px;
   background-position: bottom center;
   text-align: center;
   padding-bottom: 68px;
@@ -13,9 +13,14 @@
   position: relative;
   background-color: white;
 }
+.reviews__slider {
+  display: none;
+}
 @media @tablet-widths {
   .reviews {
     padding-top: 98px;
+    padding-bottom: 72px;
+    background-size: 100% 53px;
   }
   .reviews__wrapper {
     width: 620px;
@@ -26,11 +31,43 @@
 }
 @media @desktop-widths {
   .reviews {
-    padding-top: 252px;
+    padding-top: 184px;
     padding-bottom: 88px;
+    background-image: url(../img/icon-quotes.svg), url(../img/bg-gray-triangle.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 79px 63px, 100% 82px;
+    background-position-y: 70px, bottom;
   }
   .reviews__wrapper {
     width: 940px;
     padding: 0 10px;
+  }
+  .reviews__slider {
+    display: block;
+    position: relative;
+  }
+  .reviews__slider-conrol {
+    font-size: 0;
+    position: absolute;
+    width: 22px;
+    height: 42px;
+    cursor: pointer;
+    opacity: 0.3;
+    top: -195px;
+    background-repeat: no-repeat;
+  }
+  .reviews__slider-conrol:hover {
+    opacity: 0.6;
+  }
+  .reviews__slider-conrol:active {
+    opacity: 0.1;
+  }
+  .reviews__slider-conrol--left {
+    background-image: url(../img/icon-review-arrow-left.svg);
+    left: 0;
+  }
+  .reviews__slider-conrol--right {
+    background-image: url(../img/icon-review-arrow-right.svg);
+    right: 0;
   }
 }

@@ -3,6 +3,19 @@
   width: 320px;
   padding-left: 10px;
   box-sizing: border-box;
+  position: relative;
+}
+.reserch-description::before {
+  content: "24";
+  position: absolute;
+  top: 56px;
+  left: -236px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 96px;
+  line-height: 192px;
+  text-align: center;
+  color: #d22856;
+  z-index: 1;
 }
 .reserch-description__title {
   margin: 0;
@@ -50,6 +63,11 @@
   .reserch-description {
     width: 590px;
     padding-left: 68px;
+  }
+  .reserch-description::before {
+    top: 93px;
+    left: -216px;
+    font-size: 118px;
   }
   .reserch-description__title {
     padding-top: 90px;
