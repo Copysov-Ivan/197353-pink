@@ -4,7 +4,12 @@
   var openClose = document.querySelector(".page-header__menu-burger");
   var mobileMenu = document.querySelector(".page-header__menu");
 
-  openClose.addEventListener('click', function(event) {
+  if (mobileMenu.classList.contains("page-header__menu--no-js")) {
+    mobileMenu.classList.remove("page-header__menu--no-js");
+    openClose.classList.remove("page-header__menu-burger--no-js");
+  }
+
+  openClose.addEventListener("click", function(event) {
 
     if (mobileMenu.classList.contains("page-header__menu--open")) {
 

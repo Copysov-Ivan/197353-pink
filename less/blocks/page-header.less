@@ -18,13 +18,16 @@
   width: 100%;
   z-index: 1;
 }
-.page-header__menu--open {
+.page-header__menu--open,
+.page-header__menu--no-js {
   background: none;
 }
-.page-header__menu--open .main-menu {
+.page-header__menu--open .main-menu,
+.page-header__menu--no-js .main-menu {
   display: block;
 }
-.page-header__menu--open .page-header__wrapper {
+.page-header__menu--open .page-header__wrapper,
+.page-header__menu--no-js .page-header__wrapper {
   min-height: 72px;
 }
 .page-header__menu-logo {
@@ -33,7 +36,7 @@
   height: 22px;
   background-image: url(../img/logo-pink-white-mobile.svg);
   background-repeat: no-repeat;
-  margin: auto 0;
+  margin: 22px 0;
   font-size: 0;
   z-index: 1;
 }
@@ -56,13 +59,30 @@
   border: 0;
   padding: 0;
 }
-.page-header__menu-burger--open {
+.page-header__menu-burger:hover {
+  background-image: url(../img/icon-menu-burger-red.svg);
+}
+.page-header__menu-burger:active {
+  background-image: url(../img/icon-menu-burger-red.svg);
+  opacity: 0.3;
+}
+.page-header__menu-burger--open,
+.page-header__menu-burger--no-js {
   width: 24px;
   background-image: url(../img/icon-menu-cross.svg);
 }
+.page-header__menu-burger--open:hover,
+.page-header__menu-burger--no-js:hover {
+  background-image: url(../img/icon-menu-cross-red.svg);
+}
+.page-header__menu-burger--open:active,
+.page-header__menu-burger--no-js:active {
+  background-image: url(../img/icon-menu-cross-red.svg);
+  opacity: 0.3;
+}
 .page-header__background {
   background-color: @color-darkblue;
-  background-image: url(../img/bg-back-mobile@1x.jpg);
+  // background-image: url(../img/bg-back-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position: top;
   width: 100%;
@@ -70,7 +90,10 @@
   padding-top: 3px;
   z-index: 0;
   display: flex;
-  @media @retina {
+  @media (max-width: 677px) {
+    background-image: url(../img/bg-back-mobile@1x.jpg);
+  }
+  @media @retina and (max-width: 677px) {
     background-image: url(../img/bg-back-mobile@2x.jpg);
     background-size: 700px auto;
   }
@@ -110,6 +133,7 @@
   .page-header__menu-logo {
     width: 146px;
     height: 55px;
+    margin: 27px 0;
     background-image: url(../img/logo-pink-white-tablet.svg);
   }
   .page-header__menu-logo:hover {
@@ -124,7 +148,7 @@
   }
   .page-header__background {
     margin-top: -110px;
-    background-image: url(../img/bg-back-tablet@1x.jpg);
+    // background-image: url(../img/bg-back-tablet@1x.jpg);
     padding-top: 0;
   }
   .page-header__background-wrapper {
@@ -138,17 +162,23 @@
     padding-top: 180px;
   }
 }
-@media (min-width: 677px) and (min-resolution: 144dpi), (min-width: 677px) and (min-resolution: 1.5dppx) {
+@media @tablet-widths and (max-width: 977px) {
+  .page-header__background {
+    background-image: url(../img/bg-back-tablet@1x.jpg);
+  }  
+}
+@media (min-width: 677px) and (min-resolution: 144dpi) and (max-width: 977px),
+(min-width: 677px) and (min-resolution: 1.5dppx) and (max-width: 977px) {
   .page-header__background {
     background-image: url(../img/bg-back-tablet@2x.jpg);
     background-size: 1200px auto;
   }
 }
 @media @desktop-widths {
-  .page-header {
-    background-image: url(../img/bg-back-desktop@1x.jpg);
-    background-position-x: center;
-  }
+  // .page-header {
+  //   background-image: url(../img/bg-back-desktop@1x.jpg);
+  //   background-position-x: center;
+  // }
   .page-header__wrapper {
     width: 940px;
     padding-left: 10px;
@@ -174,12 +204,14 @@
     display: none;
   }
   .page-header__background {
+    display: block;
+    margin-top: -110px;
     background-image: url(../img/bg-back-desktop@1x.jpg);
     justify-content: flex-end;
-    margin-top: -110px;
   }
   .page-header__background-wrapper {
     width: 940px;
+    display: block;
     min-height: 394px;
     padding: 0 10px;
   }
@@ -195,7 +227,8 @@
     padding-bottom: 85px;
   }
 }
-@media (min-width: 977px) and (min-resolution: 144dpi), (min-width: 977px) and (min-resolution: 1.5dppx) {
+@media (min-width: 977px) and (min-resolution: 144dpi),
+(min-width: 977px) and (min-resolution: 1.5dppx) {
   .page-header__background {
     background-image: url(../img/bg-back-desktop@2x.jpg);
     background-size: 2560px auto;

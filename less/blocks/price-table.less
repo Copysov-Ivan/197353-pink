@@ -11,7 +11,7 @@
   background-color: @color-darkblue;
   border: 2px solid @color-darkblue;
   border-top: none;
-  border-bottom: none;
+  // border-bottom: none;
   min-width: 278px;
   height: 98px;
   box-sizing: border-box;
@@ -115,6 +115,10 @@
   .price-table__title--first,
   .price-table__ceil--first {
     display: table-cell;
+  }
+  .price-table__title--first {
+    background: none;
+    border: none;
   }
   .price-table__title--hit::before {
     background-image: url(../img/bg-hit-tablet.svg);
